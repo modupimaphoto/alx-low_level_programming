@@ -3,7 +3,7 @@
  * main - entry ponit of the program
  *
  * Return: Always 0
- */`
+ */
 int main(void)
 {
 	printf("Size of char: %ld byte(s)\n", sizeof(char));
