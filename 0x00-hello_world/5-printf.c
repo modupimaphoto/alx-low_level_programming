@@ -1,7 +1,8 @@
 #include <stdio.h>
-
 /**
- * Prints out text
+ * main - entry ponit of the program
+ *
+ * Return: Always 0
  */
 int main(void)
 {
