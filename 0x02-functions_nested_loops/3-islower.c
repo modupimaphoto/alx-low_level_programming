@@ -3,7 +3,7 @@
 /**
  * _islower - check the code.
  *
- * member 'c' - character to check
+ * @c: character to check.
  *
  * Return: Always 0.
  */
