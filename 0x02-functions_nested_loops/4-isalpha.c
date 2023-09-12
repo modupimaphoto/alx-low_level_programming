@@ -3,6 +3,8 @@
 /**
  * _isalpha - check tghe code.
  *
+ * @c: character to check.
+ *
  * Return: Always 0.
  */
 int _isalpha(int c)
