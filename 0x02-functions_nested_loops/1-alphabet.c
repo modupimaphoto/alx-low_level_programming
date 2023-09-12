@@ -1,18 +1,17 @@
 #include "main.h"
-
 /**
- * main - check the code
+ * print_varibles - entry point.
  *
- * Return: Always 0.
+ * _putchar
  */
-void print_alphabet()
+void print_alphabet(void)
 {
-        char c = 'a';
+	char c = 'a';
 
-        while (c <= 'z')
-        {
-                _putchar(c);
-                ++c;
-        }
-        _putchar('\n');
+	while (c <= 'z')
+	{
+		_putchar(c);
+		++c;
+	}
+	_putchar('\n');
 }
