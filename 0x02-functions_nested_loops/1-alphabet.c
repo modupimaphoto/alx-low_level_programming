@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * print_varibles - entry point.
+ * print_alphabet - check the code
  *
- * _putchar
+ * Return: Always 0.
  */
 void print_alphabet(void)
 {
