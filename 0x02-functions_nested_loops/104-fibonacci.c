@@ -1,48 +1,41 @@
 #include <stdio.h>
 
+/*
+ * printFibonacci - check the code
+ *
+ * @n: parameter.
+ */
+void printFibonacci(int n)
+{
+	int fib1 = 1, fib2 = 2, nextFib;
+	int i;
+
+	printf("%d, %d, ", fib1, fib2);
+
+	for (i = 3; i <= n; i++)
+	{
+		nextFib = fib1 + fib2;
+		printf("%d", nextFib);
+
+		if (i != n)
+		{
+			printf(", ");
+		}
+
+		fib1 = fib2;
+		fib2 = nextFib;
+	}
+
+	printf("\n");
+}
+/**
+ * main - finds and prints the first 98 Fibonacci numbers.
+ * Return: Always 0.
+ */
 int main(void)
 {
-	int i, overflow, len;
-	int f1[100] = {0};
-	int f2[100] = {0};
-	int f3[100] = {0};
+	int n = 98;
 
-	f1[0] = 1;
-	f2[0] = 2;
-
-	printf("%d, %d", f1[0], f2[0]);
-
-	for (i = 0; i < 96; i++)
-	{
-		overflow = 0;
-		len = 0;
-
-
-		for (len = 0; f1[len] != 0 || f2[len] != 0; len++)
-		{
-			f3[len] = f1[len] + f2[len] + overflow;
-			overflow = f3[len] / 10;
-			f3[len] = f3[len] % 10;
-		}
-
-		if (overflow > 0)
-		{
-			f3[len] = overflow;
-			len++;
-		}
-
-		for (len = len - 1; len >= 0; len--)
-		{
-			printf(", %d", f3[len]);
-		}
-		for (len = 0; len < 100; len++)
-		{
-			f1[len] = f2[len];
-			f2[len] = f3[len];
-			f3[len] = 0;
-		}
-	}
-	printf("\n");
-	return (0);
+	printFibonacci(n);
 }
 
