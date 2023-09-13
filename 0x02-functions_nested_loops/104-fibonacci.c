@@ -38,4 +38,3 @@ int main(void)
 
 	printFibonacci(n);
 }
-
