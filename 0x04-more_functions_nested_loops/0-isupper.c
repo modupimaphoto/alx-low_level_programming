@@ -10,7 +10,7 @@
  */
 int _isupper(int c)
 {
-	if (islower(c))
+	if (isupper(c))
 	{
 		return (1);
 	}
