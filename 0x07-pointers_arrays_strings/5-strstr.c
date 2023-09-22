@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <string.h>
 /**
  * _strstr - locates a substring.
  * @haystack: string type.
@@ -8,5 +8,10 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
+	char *ptr = strstr(haystack, needle);
 
+	if (ptr != NULL)
+		return (ptr);
+	else
+		return (NULL);
 }
