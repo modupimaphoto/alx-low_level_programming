@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-
+/**
+ * is_positive_number - check if is postive or not.
+ * @str: char type.
+ * Return: 1 or 0.
+ */
 int is_positive_number(char *str)
 {
 	int i;
@@ -26,6 +30,7 @@ int is_positive_number(char *str)
 int main(int argc, char *argv[])
 {
 	int i, sum;
+
 	sum = 0;
 
 	if (argc == 1)
