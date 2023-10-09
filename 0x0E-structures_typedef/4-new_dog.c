@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include <stddef.h> 
+#include <string.h>
 #include "dog.h"
 /**
  * new_dog - Short description
@@ -12,13 +12,23 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	struct dog *new_dog;
+	dog_t *newDog = (dog_t *)malloc(sizeof(dog_t));
 
-	new_dog = malloc(sizeof(struct dog));
-	if (new_dog == NULL)
+	if (newDog == NULL)
 		return (NULL);
-	new_dog->name = name;
-	new_dog->age = age;
-	new_dog->owner = owner;
-	return (new_dog);
+	newDog->name = (char *)malloc(strlen(name) + 1);
+	newDog->owner = (char *)malloc(strlen(owner) + 1);
+
+	if (newDog->name == NULL || newDog->owner == NULL)
+	{
+		free(newDog->name);
+		free(newDog->owner);
+		free(newDog);
+		return (NULL);
+	}
+	strcpy(newDog->name, name);
+	strcpy(newDog->owner, owner);
+	newDog->age = age;
+
+	return (newDog);
 }
