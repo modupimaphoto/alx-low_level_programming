@@ -7,41 +7,41 @@
  */
 void print_all(const char * const format, ...)
 {
-	va_list args;
 	int i = 0;
-	char c;
-	int num;
-	char *s;
-	float f;
+	char *str, *sep = "";
+
+	va_list args;
 
 	va_start(args, format);
 
-	while (format && format[i])
+	if (format)
 	{
-		if (format[i] == 'c')
+		while (format[i])
 		{
-			c = va_arg(args, int);
-			printf("%c", c);
+			switch (format[i])
+			{
+				case 'c':
+					printf("%s%c", sep, va_arg(args, int));
+					break;
+				case 'i':
+					printf("%s%d", sep, va_arg(args, int));
+					break;
+				case 'f':
+					printf("%s%f", sep, va_arg(args, double));
+					break;
+				case 's':
+					str = va_arg(args, char *);
+					if (!str)
+						str = "(nil)";
+					printf("%s%s", sep, str);
+					break;
+				default:
+					i++;
+					continue;
+			}
+			sep = ", ";
+			i++;
 		}
-		else if (format[i] == 'i')
-		{
-			num = va_arg(args, int);
-			printf("%d", num);
-		}
-		else if (format[i] == 'f')
-		{
-			f = va_arg(args, double);
-			printf("%f", f);
-		}
-		else if (format[i] == 's')
-		{
-			s = va_arg(args, char *);
-			if (s == NULL)
-				printf("(nil)");
-			else
-				printf("%s", s);
-		}
-		i++;
 	}
 	va_end(args);
 	printf("\n");
