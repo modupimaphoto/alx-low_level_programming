@@ -1,0 +1,5 @@
+# 0x17. C - Doubly linked lists
+
+A doubly linked list is a type of linked list in which each node contains a pointer to the previous node as well as the next node of the linked list. This means that each node in a doubly linked list has three fields: data, next, and prev. The data field stores the value of the node, while the next and prev fields store the addresses of the next and previous nodes in the list, respectively.
+
+Doubly linked lists can be traversed in both forward and backward directions, making them more flexible than singly linked lists. They are used in various applications such as web browsers for backward and forward navigation of web pages, LRU (Least Recently Used) / MRU (Most Recently Used) Cache, and to maintain undo and redo functionalities. A doubly linked list is a type of linked list in which each node contains a pointer to the previous node as well as the next node of the linked list. This means that each node in a doubly linked list has three fields: data, next, and prev. The data field stores the value of the node, while the next and prev fields store the addresses of the next and previous nodes in the list, respectively.
