@@ -1,0 +1,5 @@
+CC = gcc
+FLAG = -o
+
+all:
+	${CC} main.c school.c ${FLAG} school
